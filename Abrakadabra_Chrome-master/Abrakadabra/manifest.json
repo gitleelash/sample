@@ -1,0 +1,37 @@
+{
+  "name": "Abrakadabra",
+  "version": "1.1.0.8",
+  "manifest_version": 1,
+  "description": "Replace words written in other language keyboard layout",
+  "browser_action": { 
+	  "default_title": "Abrakadabra", 
+	  "default_icon": "images/icon.ico",
+	  "default_popup": "popup.html"
+ 	},
+  "icons":{
+  "48":"images/icon.ico"
+  },
+  "background": {
+	"page": "background.html"
+	},
+  "permissions": [
+  "tabs", 
+	"*://gmail.com/*", 
+	"*://mail.google.com/*",
+	"*://vk.com/*",
+	"*://fb.com/*",
+	"*://facebook.com/*",
+	"*://imo.im/*"
+   ],
+   "content_scripts": [ {
+    "matches": ["http://*/*", "https://*/*"],
+	"js": [
+        "/js/jquery-1.7.2.min.js",
+		"/js/shortcut.js",
+		"/js/abra_library.js",
+		"/js/abrakadabra.js",
+		"/js/background.js",
+		"/js/hotkeys.js",
+		"/js/loader.js"
+	]}]
+}

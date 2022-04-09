@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+  <div style="position:relative; width: 250px;">
+  <div id="english" style="position: absolute; left:0px; width:250px;">
+	<input type="button" onclick="switchLanguage(this)" value="Русский"/><br>
+  	Found a bug/error? Send it to <a href="mailto:abrakadabra@unixander.org.ua">us</a></br>
+  	Also will be glad to see your feedback. <a href="mailto:abrakadabra@unixander.org.ua">Send feedback</a>
+  	<hr>
+	<b>Settings:</b><br>
+	<input type="checkbox" class="abracheck" onclick="changeLogCheck();"/> Check message log<br>
+	<input type="checkbox" class="abracheckInput" onclick="changecheckInput();"/> Check input field
+	<hr>
+	<b>Set hotkey:</b>
+	<br>
+	<input type="checkbox" class="checkselected" onclick="changeHotkeyAction();"/>Check only selected text on hotkey
+	<br>
+	<u>Current hotkey:</u><span class="currenthot"></span>
+	<form name="selecthotkey">
+	<select name="firstkey">
+		<option value="Ctrl">Ctrl
+		<option value="Alt">Alt
+		<option value="Shift">Shift
+		<option value="Meta">Meta
+	</select>
+	<select name="secondkey">
+		<option value="none">None
+		<option value="Ctrl">Ctrl
+		<option value="Alt">Alt
+		<option value="Shift">Shift
+		<option value="Meta">Meta
+	</select>
+	<select name="speckey">
+	<optgroup label="Letters">
+		<option value="A">A
+		<option value="B">B
+		<option value="C">C
+		<option value="D">D
+		<option value="E">E
+		<option value="F">F
+		<option value="G">G
+		<option value="H">H
+		<option value="I">I
+		<option value="J">J
+		<option value="K">K
+		<option value="L">L
+		<option value="M">M
+		<option value="N">N
+		<option value="O">O
+		<option value="P">P
+		<option value="R">R
+		<option value="S">S
+		<option value="T">T
+		<option value="U">U
+		<option value="V">V
+		<option value="W">W
+		<option value="X">X
+		<option value="Y">Y
+		<option value="Z">Z
+	</optgroup>
+	<optgroup label="Special keys">
+		<option value="Tab">Tab
+		<option value="Space">Space
+		<option value="Return">Return
+		<option value="Enter">Enter
+		<option value="Backspace">Backspace
+		<option value="Scroll_Lock">Scroll_Lock
+		<option value="Caps_lock">Caps_lock
+		<option value="Num_lock">Num_lock
+		<option value="Pause">Pause
+		<option value="Insert">Insert
+		<option value="Home">Home
+		<option value="Delete">Delete
+		<option value="End">End
+		<option value="Page_up">Page_up
+		<option value="Page_down">Page_down
+		<option value="Left">Left
+		<option value="Up">Up
+		<option value="Right">Right
+		<option value="Down">Down
+		<option value="F1">F1
+		<option value="F2">F2
+		<option value="F3">F3
+		<option value="F4">F4
+		<option value="F5">F5
+		<option value="F6">F6
+		<option value="F7">F7
+		<option value="F8">F8
+		<option value="F9">F9
+		<option value="F10">F10
+		<option value="F11">F11
+		<option value="F12">F12
+	</optgroup>
+	</select>
+	<div align=center>
+	<input type="button" value="Set Hotkey" onclick="setHotkey(this);"/>
+	</div>
+	</form>
+	<hr>
+  </div>
+  <div id="russian" style="position: absolute; left:1000px; width:250px;">
+	<input type="button" onclick="switchLanguage(this)" value="English"/><br>
+  	Нашли ошибку? Есть предложения? Напишите <a href="mailto:abrakadabra@unixander.org.ua">нам</a></br>
+  	<hr>
+	<b>Настройки:</b><br>
+	<input type="checkbox" class="abracheck" onclick="changeLogCheck();"/> Проверять историю сообщений<br>
+	<input type="checkbox" class="abracheckInput" onclick="changecheckInput();"/> Проверять поля ввода
+	<hr>
+	<b>Горячие клавиши:</b>
+	<br>
+	<input type="checkbox" class="checkselected" onclick="changeHotkeyAction();"/>Проверять только выделенный текст
+	<br>
+	<u>Текущая комбинация:</u><span class="currenthot"></span>
+	<form name="selecthotkey_rus">
+	<select name="firstkey">
+		<option value="Ctrl">Ctrl
+		<option value="Alt">Alt
+		<option value="Shift">Shift
+		<option value="Meta">Meta
+	</select>
+	<select name="secondkey">
+		<option value="none">Нет
+		<option value="Ctrl">Ctrl
+		<option value="Alt">Alt
+		<option value="Shift">Shift
+		<option value="Meta">Meta
+	</select>
+	<select name="speckey">
+	<optgroup label="Letters">
+		<option value="A">A
+		<option value="B">B
+		<option value="C">C
+		<option value="D">D
+		<option value="E">E
+		<option value="F">F
+		<option value="G">G
+		<option value="H">H
+		<option value="I">I
+		<option value="J">J
+		<option value="K">K
+		<option value="L">L
+		<option value="M">M
+		<option value="N">N
+		<option value="O">O
+		<option value="P">P
+		<option value="R">R
+		<option value="S">S
+		<option value="T">T
+		<option value="U">U
+		<option value="V">V
+		<option value="W">W
+		<option value="X">X
+		<option value="Y">Y
+		<option value="Z">Z
+	</optgroup>
+	<optgroup label="Special keys">
+		<option value="Tab">Tab
+		<option value="Space">Space
+		<option value="Return">Return
+		<option value="Enter">Enter
+		<option value="Backspace">Backspace
+		<option value="Scroll_Lock">Scroll_Lock
+		<option value="Caps_lock">Caps_lock
+		<option value="Num_lock">Num_lock
+		<option value="Pause">Pause
+		<option value="Insert">Insert
+		<option value="Home">Home
+		<option value="Delete">Delete
+		<option value="End">End
+		<option value="Page_up">Page_up
+		<option value="Page_down">Page_down
+		<option value="Left">Left
+		<option value="Up">Up
+		<option value="Right">Right
+		<option value="Down">Down
+		<option value="F1">F1
+		<option value="F2">F2
+		<option value="F3">F3
+		<option value="F4">F4
+		<option value="F5">F5
+		<option value="F6">F6
+		<option value="F7">F7
+		<option value="F8">F8
+		<option value="F9">F9
+		<option value="F10">F10
+		<option value="F11">F11
+		<option value="F12">F12
+	</optgroup>
+	</select>
+	<div align=center>
+	<input type="button" value="Сохранить комбинацию" onclick="setHotkey(this);"/>
+	</div>
+	</form>
+	<hr>
+  </div>
+  </div>
+  <script src="js/hotkeys.js"></script>
+  <script src="js/jquery-1.7.2.min.js"></script>
+  <script>
+		function switchLanguage(elem){
+			if(elem.value=="Русский"){
+				$("#english").css("left")
+				$("#english").animate("left", "-1000px").css("left", "1000px");
+				$("#russian").animate("left", "0px").css("left","0px");
+			} else {
+				$("#russian").css("left")
+				$("#russian").animate("left", "-1000px").css("left", "1000px");
+				$("#english").animate("left", "0px").css("left","0px");
+			}
+		}
+		initStorage();
+		loadCheckboxes();
+  </script>
+  </body>
+</html>
